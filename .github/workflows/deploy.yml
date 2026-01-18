@@ -21,11 +21,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # IMPORTANT: do NOT enable caching here (caching requires a lockfile)
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          # IMPORTANT: no cache here (cache requires a lockfile)
 
       - name: Install deps
         run: npm install --no-audit --no-fund
@@ -33,10 +33,13 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Verify dist exists
+      # HARD CHECKS so we don't "deploy nothing"
+      - name: Verify dist output
         run: |
-          test -d dist
+          test -f dist/index.html
+          test -d dist/assets
           ls -la dist
+          ls -la dist/assets
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
