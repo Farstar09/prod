@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -25,16 +25,23 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: "npm"
 
-      # Use npm install (NOT npm ci) so it works even if you don't have a lockfile
       - name: Install deps
         run: npm install
 
       - name: Build
         run: npm run build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+      # 🔥 DEBUG: prove dist exists and show what’s inside
+      - name: Inspect dist
+        run: |
+          echo "=== ROOT ==="
+          ls -la
+          echo "=== DIST ==="
+          ls -la dist || true
+          echo "=== DIST/ASSETS ==="
+          ls -la dist/assets || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -42,8 +49,8 @@ jobs:
           path: dist
 
   deploy:
-    runs-on: ubuntu-latest
     needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
