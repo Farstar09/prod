@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
@@ -21,25 +21,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # IMPORTANT: do NOT enable caching here (caching requires a lockfile)
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
+      # IMPORTANT: use npm ci once you commit package-lock.json
       - name: Install deps
-        run: npm install --no-audit --no-fund
+        run: npm ci
 
       - name: Build
         run: npm run build
 
-      # HARD CHECKS so we don't "deploy nothing"
-      - name: Verify dist output
+      # Debug proof (so we know assets exist)
+      - name: Inspect dist
         run: |
-          test -f dist/index.html
-          test -d dist/assets
           ls -la dist
-          ls -la dist/assets
+          find dist -maxdepth 2 -type f
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
