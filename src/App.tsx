@@ -47,7 +47,7 @@ export default function App() {
         <p className="recruitment-text">
           We're always seeking exceptional talent to join our growing organization.
         </p>
-        <button className="cta-button">Apply Now</button>
+        <button className="cta-button" aria-label="Apply to join ROSOIDEAE">Apply Now</button>
       </section>
 
       {/* Footer */}
@@ -56,9 +56,9 @@ export default function App() {
           <p className="footer-brand">ROSOIDEAE</p>
           <p className="footer-motto">Where Talent Blooms</p>
           <div className="footer-social">
-            <a href="#" className="social-link">Twitter</a>
-            <a href="#" className="social-link">Discord</a>
-            <a href="#" className="social-link">Instagram</a>
+            <a href="#" className="social-link" aria-label="Follow us on Twitter">Twitter</a>
+            <a href="#" className="social-link" aria-label="Join our Discord community">Discord</a>
+            <a href="#" className="social-link" aria-label="Follow us on Instagram">Instagram</a>
           </div>
           <p className="footer-copyright">© 2026 ROSOIDEAE. All rights reserved.</p>
         </div>
