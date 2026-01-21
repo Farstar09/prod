@@ -1,68 +1,39 @@
-import "./App.css";
+import { useEffect } from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Features from './components/Features';
+import TeamsGrid from './components/TeamsGrid';
+import NewsGrid from './components/NewsGrid';
+import Footer from './components/Footer';
+import './styles/theme.css';
+import './App.css';
 
 export default function App() {
+  useEffect(() => {
+    // Smooth scroll behavior for anchor links
+    document.documentElement.style.scrollBehavior = 'smooth';
+  }, []);
+
   return (
     <div className="app-container">
-      {/* Hero Section */}
-      <section className="hero-section">
-        <h1 className="wordmark">ROSOIDEAE</h1>
-        <p className="tagline">Where Talent Blooms</p>
-      </section>
-
-      {/* About Section */}
-      <section className="about-section">
-        <h2 className="section-title">About</h2>
-        <p className="about-text">
-          ROSOIDEAE is a premium esports and creative organization dedicated to cultivating exceptional talent. 
-          We provide structured growth pathways for players, creators, and staff through professionalism, mentorship, and opportunity.
-        </p>
-      </section>
-
-      {/* Divisions Section */}
-      <section className="divisions-section">
-        <h2 className="section-title">Divisions</h2>
-        <div className="divisions-grid">
-          <div className="division-card">
-            <h3>Esports</h3>
-            <p>Competitive gaming excellence across multiple titles</p>
+      <Header />
+      <main>
+        <Hero />
+        <section id="about" className="about-section">
+          <div className="about-container">
+            <h2 className="about-title">About ROSOIDEAE</h2>
+            <p className="about-text">
+              ROSOIDEAE is a premium esports and creative organization dedicated to cultivating exceptional talent. 
+              We provide structured growth pathways for players, creators, and staff through professionalism, 
+              mentorship, and opportunity. Our mission is to nurture talent and help it bloom into excellence.
+            </p>
           </div>
-          <div className="division-card">
-            <h3>Creative</h3>
-            <p>Content creators, streamers, and digital artists</p>
-          </div>
-          <div className="division-card">
-            <h3>Staff</h3>
-            <p>Management, coaching, and operational support</p>
-          </div>
-          <div className="division-card">
-            <h3>Competitive Teams</h3>
-            <p>Professional rosters competing at the highest level</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Recruitment Section */}
-      <section className="recruitment-section">
-        <h2 className="section-title">Join Us</h2>
-        <p className="recruitment-text">
-          We're always seeking exceptional talent to join our growing organization.
-        </p>
-        <button className="cta-button" aria-label="Apply to join ROSOIDEAE">Apply Now</button>
-      </section>
-
-      {/* Footer */}
-      <footer className="footer">
-        <div className="footer-content">
-          <p className="footer-brand">ROSOIDEAE</p>
-          <p className="footer-motto">Where Talent Blooms</p>
-          <div className="footer-social">
-            <a href="#" className="social-link" aria-label="Follow us on Twitter">Twitter</a>
-            <a href="#" className="social-link" aria-label="Join our Discord community">Discord</a>
-            <a href="#" className="social-link" aria-label="Follow us on Instagram">Instagram</a>
-          </div>
-          <p className="footer-copyright">© 2026 ROSOIDEAE. All rights reserved.</p>
-        </div>
-      </footer>
+        </section>
+        <Features />
+        <TeamsGrid />
+        <NewsGrid />
+      </main>
+      <Footer />
     </div>
   );
 }
