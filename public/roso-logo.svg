@@ -1,14 +1,14 @@
 <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Elegant minimal ROSO logo with rose accent -->
+  <!-- Elegant minimal ROSO logo with red accent for dark background -->
   <defs>
-    <linearGradient id="roseAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#D4A5C0;stop-opacity:0.3" />
-      <stop offset="100%" style="stop-color:#1A1A1A;stop-opacity:1" />
+    <linearGradient id="redAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#C84B4B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
     </linearGradient>
   </defs>
-  <text x="100" y="120" font-family="Georgia, serif" font-size="72" font-weight="400" text-anchor="middle" fill="url(#roseAccent)" letter-spacing="4">
+  <text x="100" y="120" font-family="Georgia, serif" font-size="72" font-weight="400" text-anchor="middle" fill="url(#redAccent)" letter-spacing="4">
     ROSO
   </text>
   <!-- Subtle accent line -->
-  <line x1="50" y1="140" x2="150" y2="140" stroke="#D4A5C0" stroke-width="1" opacity="0.5"/>
+  <line x1="50" y1="140" x2="150" y2="140" stroke="#C84B4B" stroke-width="1" opacity="0.7"/>
 </svg>
