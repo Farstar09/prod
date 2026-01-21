@@ -143,6 +143,7 @@
 /* Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   .navigation,
+  .nav-content,
   .nav-link,
   .nav-link::after,
   .social-icon {

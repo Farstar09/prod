@@ -13,10 +13,6 @@ export default function App() {
             src="/roso-logo.svg"
             alt="ROSOIDEAE Logo"
             className="hero-logo"
-            onError={(e) => {
-              // Fallback if logo fails to load
-              e.currentTarget.style.display = 'none';
-            }}
           />
         </div>
         <h1 className="wordmark">ROSOIDEAE</h1>
