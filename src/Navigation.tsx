@@ -20,11 +20,49 @@ export default function Navigation() {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-content">
-        <div className="nav-brand">ROSOIDEAE</div>
+        <button 
+          className="nav-brand"
+          onClick={scrollToTop}
+          aria-label="Navigate to home"
+        >
+          ROSOIDEAE
+        </button>
         <div className="nav-links">
+          <button
+            className="nav-link"
+            onClick={scrollToTop}
+            aria-label="Navigate to Home"
+          >
+            Home
+          </button>
+          <button
+            className="nav-link"
+            onClick={() => scrollToSection('teams')}
+            aria-label="Navigate to Teams section"
+          >
+            Teams
+          </button>
+          <button
+            className="nav-link"
+            onClick={() => scrollToSection('news')}
+            aria-label="Navigate to News section"
+          >
+            News
+          </button>
+          <button
+            className="nav-link"
+            onClick={() => scrollToSection('schedule')}
+            aria-label="Navigate to Schedule section"
+          >
+            Schedule
+          </button>
           <button
             className="nav-link"
             onClick={() => scrollToSection('about')}
@@ -32,20 +70,15 @@ export default function Navigation() {
           >
             About
           </button>
-          <button
-            className="nav-link"
-            onClick={() => scrollToSection('ecosystem')}
-            aria-label="Navigate to Ecosystem section"
-          >
-            Ecosystem
-          </button>
-          <button
-            className="nav-link"
-            onClick={() => scrollToSection('join')}
-            aria-label="Navigate to Join section"
+          <a
+            href="https://discord.gg/roso"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-join-button"
+            aria-label="Join ROSOIDEAE Discord"
           >
             Join
-          </button>
+          </a>
           <div className="nav-socials">
             <a
               href="https://discord.gg/roso"
