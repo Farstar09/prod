@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { LOGO_PATH, SITE_NAME, SITE_TAGLINE } from '../constants';
 import './Hero.css';
 
 export default function Hero() {
@@ -19,7 +20,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <motion.img
-            src="/prod/assets/rosologo.svg"
+            src={LOGO_PATH}
             alt="ROSO Logo"
             className="hero-logo"
             animate={{
@@ -39,7 +40,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
         >
-          ROSOIDEAE
+          {SITE_NAME}
         </motion.h1>
 
         <motion.p
@@ -48,7 +49,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
         >
-          Where Talent Blooms
+          {SITE_TAGLINE}
         </motion.p>
 
         <motion.div
@@ -68,7 +69,7 @@ export default function Hero() {
           </motion.button>
           <motion.button
             className="cta-secondary"
-            onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
+            onClick={() => window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' })}
             whileHover={{ scale: 1.05, borderColor: 'var(--color-accent-orange)' }}
             whileTap={{ scale: 0.95 }}
             aria-label="Get in touch"

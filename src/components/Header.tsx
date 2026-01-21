@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { LOGO_PATH, SITE_NAME } from '../constants';
 import './Header.css';
 
 export default function Header() {
@@ -43,11 +44,11 @@ export default function Header() {
           aria-label="Return to top"
         >
           <img
-            src="/prod/assets/rosologo.svg"
+            src={LOGO_PATH}
             alt="ROSO Logo"
             className="header-logo"
           />
-          <span className="logo-text">ROSOIDEAE</span>
+          <span className="logo-text">{SITE_NAME}</span>
         </button>
 
         <nav className="nav-desktop" aria-label="Main navigation">

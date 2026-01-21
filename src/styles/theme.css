@@ -96,13 +96,3 @@
   --z-popover: 1060;
   --z-tooltip: 1070;
 }
-
-/* Dark mode support (optional) */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg-primary: #0A0A0A;
-    --color-bg-secondary: #1A1A1A;
-    --color-text-primary: #FFFFFF;
-    --color-text-secondary: #CCCCCC;
-  }
-}

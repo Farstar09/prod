@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
+import { LOGO_PATH, SITE_NAME, SITE_TAGLINE } from '../constants';
 import './Footer.css';
 
 export default function Footer() {
@@ -62,13 +63,13 @@ export default function Footer() {
               aria-label="Return to top"
             >
               <img
-                src="/prod/assets/rosologo.svg"
+                src={LOGO_PATH}
                 alt="ROSO Logo"
                 className="footer-logo"
               />
             </button>
-            <h3 className="footer-brand">ROSOIDEAE</h3>
-            <p className="footer-tagline">Where Talent Blooms</p>
+            <h3 className="footer-brand">{SITE_NAME}</h3>
+            <p className="footer-tagline">{SITE_TAGLINE}</p>
           </div>
 
           <div className="footer-links-section">

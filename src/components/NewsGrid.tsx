@@ -24,7 +24,7 @@ const newsItems: NewsItem[] = [
     title: 'Welcoming Three New Content Creators',
     date: 'January 10, 2026',
     category: 'Announcements',
-    excerpt: 'We\'re excited to announce the addition of three talented creators to the ROSOIDEAE family.',
+    excerpt: "We're excited to announce the addition of three talented creators to the ROSOIDEAE family.",
   },
   {
     id: '3',
