@@ -3,46 +3,66 @@ import "./App.css";
 export default function App() {
   return (
     <div className="app-container">
-      <div className="animated-background">
-        <div className="flower flower-1"></div>
-        <div className="flower flower-2"></div>
-        <div className="flower flower-3"></div>
-        <div className="flower flower-4"></div>
-        <div className="flower flower-5"></div>
-      </div>
-      
-      <div className="content">
-        <h1 className="animated-title">
-          <span className="letter">R</span>
-          <span className="letter">O</span>
-          <span className="letter">S</span>
-          <span className="letter">O</span>
-          <span className="letter">I</span>
-          <span className="letter">D</span>
-          <span className="letter">E</span>
-          <span className="letter">A</span>
-          <span className="letter">E</span>
-        </h1>
+      {/* Hero Section */}
+      <section className="hero-section">
+        <h1 className="wordmark">ROSOIDEAE</h1>
         <p className="tagline">Where Talent Blooms</p>
-        
-        <div className="info-cards">
-          <div className="card">
-            <div className="card-icon">🌸</div>
-            <h3>Bloom</h3>
-            <p>Nurture your skills and watch them flourish</p>
+      </section>
+
+      {/* About Section */}
+      <section className="about-section">
+        <h2 className="section-title">About</h2>
+        <p className="about-text">
+          ROSOIDEAE is a premium esports and creative organization dedicated to cultivating exceptional talent. 
+          We provide structured growth pathways for players, creators, and staff through professionalism, mentorship, and opportunity.
+        </p>
+      </section>
+
+      {/* Divisions Section */}
+      <section className="divisions-section">
+        <h2 className="section-title">Divisions</h2>
+        <div className="divisions-grid">
+          <div className="division-card">
+            <h3>Esports</h3>
+            <p>Competitive gaming excellence across multiple titles</p>
           </div>
-          <div className="card">
-            <div className="card-icon">🌺</div>
-            <h3>Grow</h3>
-            <p>Continuous learning and development</p>
+          <div className="division-card">
+            <h3>Creative</h3>
+            <p>Content creators, streamers, and digital artists</p>
           </div>
-          <div className="card">
-            <div className="card-icon">🌹</div>
-            <h3>Thrive</h3>
-            <p>Reach your full potential</p>
+          <div className="division-card">
+            <h3>Staff</h3>
+            <p>Management, coaching, and operational support</p>
+          </div>
+          <div className="division-card">
+            <h3>Competitive Teams</h3>
+            <p>Professional rosters competing at the highest level</p>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Recruitment Section */}
+      <section className="recruitment-section">
+        <h2 className="section-title">Join Us</h2>
+        <p className="recruitment-text">
+          We're always seeking exceptional talent to join our growing organization.
+        </p>
+        <button className="cta-button" aria-label="Apply to join ROSOIDEAE">Apply Now</button>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <div className="footer-content">
+          <p className="footer-brand">ROSOIDEAE</p>
+          <p className="footer-motto">Where Talent Blooms</p>
+          <div className="footer-social">
+            <a href="#" className="social-link" aria-label="Follow us on Twitter">Twitter</a>
+            <a href="#" className="social-link" aria-label="Join our Discord community">Discord</a>
+            <a href="#" className="social-link" aria-label="Follow us on Instagram">Instagram</a>
+          </div>
+          <p className="footer-copyright">© 2026 ROSOIDEAE. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }
