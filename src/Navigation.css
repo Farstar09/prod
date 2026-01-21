@@ -37,6 +37,25 @@
   cursor: pointer;
   transition: color 0.3s ease;
   padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-logo {
+  height: 32px;
+  width: auto;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.nav-brand:hover .nav-logo,
+.nav-brand:focus .nav-logo {
+  opacity: 1;
+}
+
+.nav-brand-text {
+  display: inline-block;
 }
 
 .nav-brand:hover,

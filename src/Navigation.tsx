@@ -32,7 +32,16 @@ export default function Navigation() {
           onClick={scrollToTop}
           aria-label="Navigate to home"
         >
-          ROSOIDEAE
+          <img 
+            src="/prod/roso-logo.svg" 
+            alt="ROSO" 
+            className="nav-logo"
+            onError={(e) => {
+              // Fallback to text if logo fails to load
+              (e.target as HTMLImageElement).style.display = 'none';
+            }}
+          />
+          <span className="nav-brand-text">ROSOIDEAE</span>
         </button>
         <div className="nav-links">
           <button
@@ -69,6 +78,20 @@ export default function Navigation() {
             aria-label="Navigate to About section"
           >
             About
+          </button>
+          <button
+            className="nav-link"
+            onClick={() => scrollToSection('partners')}
+            aria-label="Navigate to Partners section"
+          >
+            Partners
+          </button>
+          <button
+            className="nav-link"
+            onClick={() => scrollToSection('contact')}
+            aria-label="Navigate to Contact section"
+          >
+            Contact
           </button>
           <a
             href="https://discord.gg/roso"
