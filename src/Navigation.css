@@ -32,6 +32,17 @@
   font-weight: 400;
   letter-spacing: 0.1em;
   color: #FFFFFF;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0;
+}
+
+.nav-brand:hover,
+.nav-brand:focus {
+  color: #C84B4B;
+  outline: none;
 }
 
 .nav-links {
@@ -74,6 +85,31 @@
 .nav-link:hover::after,
 .nav-link:focus::after {
   width: 100%;
+}
+
+.nav-join-button {
+  background: transparent;
+  border: 2px solid #C84B4B;
+  color: #C84B4B;
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 0.6rem 1.5rem;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+  font-weight: 500;
+}
+
+.nav-join-button:hover,
+.nav-join-button:focus {
+  background: #C84B4B;
+  color: #FFFFFF;
+  box-shadow: 0 0 20px rgba(200, 75, 75, 0.6), 
+              0 0 40px rgba(200, 75, 75, 0.3);
+  outline: none;
 }
 
 .nav-socials {
@@ -146,7 +182,14 @@
   .nav-content,
   .nav-link,
   .nav-link::after,
+  .nav-join-button,
+  .nav-brand,
   .social-icon {
     transition: none;
+  }
+  
+  .nav-join-button:hover,
+  .nav-join-button:focus {
+    box-shadow: none;
   }
 }

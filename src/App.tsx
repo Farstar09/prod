@@ -10,9 +10,13 @@ export default function App() {
       <section className="hero-section" id="hero">
         <div className="hero-logo-container">
           <img
-            src="/prod/roso-logo.svg"
+            src="/prod/assets/roso-logo.png"
             alt="ROSOIDEAE Logo"
             className="hero-logo"
+            onError={(e) => {
+              // Fallback to SVG if PNG not found
+              (e.target as HTMLImageElement).src = "/prod/roso-logo.svg";
+            }}
           />
         </div>
         <h1 className="wordmark">ROSOIDEAE</h1>
@@ -44,6 +48,31 @@ export default function App() {
         <p className="about-text">
           ROSOIDEAE is a premium esports and creative organization dedicated to cultivating exceptional talent. 
           We provide structured growth pathways for players, creators, and staff through professionalism, mentorship, and opportunity.
+        </p>
+      </section>
+
+      {/* Teams Section */}
+      <section className="teams-section" id="teams">
+        <h2 className="section-title">Teams</h2>
+        <p className="section-text">
+          Our competitive rosters represent excellence across multiple gaming titles. 
+          Each team is built on dedication, skill, and a commitment to victory.
+        </p>
+      </section>
+
+      {/* News Section */}
+      <section className="news-section" id="news">
+        <h2 className="section-title">News</h2>
+        <p className="section-text">
+          Stay updated with the latest announcements, tournament results, and roster changes.
+        </p>
+      </section>
+
+      {/* Schedule Section */}
+      <section className="schedule-section" id="schedule">
+        <h2 className="section-title">Schedule</h2>
+        <p className="section-text">
+          Upcoming matches and events. Follow our teams as they compete at the highest level.
         </p>
       </section>
 
