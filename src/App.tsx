@@ -1,8 +1,11 @@
 import "./App.css";
+import Navigation from "./Navigation";
 
 export default function App() {
   return (
     <div className="app-container">
+      <Navigation />
+
       {/* Hero Section */}
       <section className="hero-section" id="hero">
         <div className="hero-logo-container">

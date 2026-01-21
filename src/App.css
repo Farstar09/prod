@@ -51,6 +51,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   padding: 0 8%;
+  padding-top: 5rem; /* Account for fixed navigation */
   max-width: 1400px;
   margin: 0 auto;
   animation: fadeIn 1.2s ease-out;
@@ -424,7 +425,11 @@ body {
 
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
-  .hero-section,
+  .hero-section {
+    padding: 4rem 6%;
+    padding-top: 6rem; /* More space for mobile nav */
+  }
+
   .about-section,
   .divisions-section,
   .recruitment-section {
@@ -446,7 +451,11 @@ body {
 }
 
 @media (max-width: 480px) {
-  .hero-section,
+  .hero-section {
+    padding: 3rem 5%;
+    padding-top: 7rem;
+  }
+
   .about-section,
   .divisions-section,
   .recruitment-section {
