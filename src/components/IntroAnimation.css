@@ -1,0 +1,80 @@
+/* Full-screen intro overlay */
+.intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-near-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.intro-overlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Logo wrapper for animation */
+.intro-logo-wrapper {
+  position: relative;
+}
+
+/* Intro logo with pop/fracture animation */
+.intro-logo {
+  width: 200px;
+  height: auto;
+  animation: logoIntro 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  filter: drop-shadow(0 0 30px rgba(200, 75, 75, 0.6));
+}
+
+/* Logo intro animation: scale from 0.7, subtle fracture effect, scale to 1 */
+@keyframes logoIntro {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+    filter: drop-shadow(0 0 30px rgba(200, 75, 75, 0.6)) blur(2px);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(0.75);
+    filter: drop-shadow(0 0 30px rgba(200, 75, 75, 0.6)) blur(1px);
+  }
+  45% {
+    /* Subtle "fracture" - small scale bump and rotation */
+    transform: scale(0.78) rotate(-1deg);
+    filter: drop-shadow(0 0 40px rgba(200, 75, 75, 0.8)) brightness(1.2);
+  }
+  50% {
+    transform: scale(0.76) rotate(1deg);
+    filter: drop-shadow(0 0 40px rgba(200, 75, 75, 0.8)) brightness(1.2);
+  }
+  70% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 50px rgba(200, 75, 75, 0.9)) brightness(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0 0 40px rgba(200, 75, 75, 0.7)) blur(0px);
+  }
+}
+
+/* Accessibility: Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .intro-logo {
+    animation: logoIntroSimple 1.8s ease-out forwards;
+  }
+
+  @keyframes logoIntroSimple {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

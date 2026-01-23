@@ -1,0 +1,125 @@
+/* Container for all background effects */
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Animated background lines */
+.bg-line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(200, 75, 75, 0.15) 30%,
+    rgba(200, 75, 75, 0.25) 50%,
+    rgba(200, 75, 75, 0.15) 70%,
+    transparent 100%
+  );
+  opacity: 0.3;
+}
+
+/* Individual line positions and animations */
+.bg-line-1 {
+  left: 10%;
+  animation: floatLine 25s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.bg-line-2 {
+  left: 25%;
+  animation: floatLine 30s ease-in-out infinite;
+  animation-delay: -5s;
+}
+
+.bg-line-3 {
+  left: 45%;
+  animation: floatLine 28s ease-in-out infinite;
+  animation-delay: -10s;
+}
+
+.bg-line-4 {
+  left: 60%;
+  animation: floatLine 32s ease-in-out infinite;
+  animation-delay: -15s;
+}
+
+.bg-line-5 {
+  left: 75%;
+  animation: floatLine 27s ease-in-out infinite;
+  animation-delay: -20s;
+}
+
+.bg-line-6 {
+  left: 90%;
+  animation: floatLine 29s ease-in-out infinite;
+  animation-delay: -8s;
+}
+
+/* Slow floating animation for lines */
+@keyframes floatLine {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.2;
+  }
+  25% {
+    transform: translateY(-3%) translateX(5px);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-5%) translateX(-5px);
+    opacity: 0.3;
+  }
+  75% {
+    transform: translateY(-2%) translateX(3px);
+    opacity: 0.35;
+  }
+}
+
+/* Red ambient glow - positioned at bottom and extends 80% up the page */
+.ambient-glow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80%;
+  background: linear-gradient(
+    to top,
+    rgba(200, 75, 75, 0.25) 0%,
+    rgba(200, 75, 75, 0.18) 20%,
+    rgba(200, 75, 75, 0.12) 40%,
+    rgba(200, 75, 75, 0.06) 60%,
+    rgba(200, 75, 75, 0.03) 75%,
+    transparent 100%
+  );
+  animation: glowPulse 12s ease-in-out infinite;
+}
+
+/* Subtle pulsing glow animation */
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+/* Accessibility: Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .bg-line {
+    animation: none;
+  }
+  
+  .ambient-glow {
+    animation: none;
+    opacity: 0.7;
+  }
+}
