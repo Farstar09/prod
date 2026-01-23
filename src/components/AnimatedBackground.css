@@ -83,7 +83,7 @@
   }
 }
 
-/* Red ambient glow - starts midway (50% down page) and extends upward */
+/* Red ambient glow - positioned at bottom and extends 80% up the page */
 .ambient-glow {
   position: absolute;
   bottom: 0;
@@ -114,12 +114,12 @@
 
 /* Accessibility: Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .bg-line,
-  .ambient-glow {
+  .bg-line {
     animation: none;
   }
   
   .ambient-glow {
+    animation: none;
     opacity: 0.7;
   }
 }
