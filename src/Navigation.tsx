@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Navigation.css';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,23 +15,12 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-content">
-        <button 
+        <Link 
+          to="/"
           className="nav-brand"
-          onClick={scrollToTop}
           aria-label="Navigate to home"
         >
           <img 
@@ -42,57 +33,50 @@ export default function Navigation() {
             }}
           />
           <span className="nav-brand-text">ROSOIDEAE</span>
-        </button>
+        </Link>
         <div className="nav-links">
-          <button
-            className="nav-link"
-            onClick={scrollToTop}
+          <Link
+            to="/"
+            className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
             aria-label="Navigate to Home"
           >
             Home
-          </button>
-          <button
-            className="nav-link"
-            onClick={() => scrollToSection('teams')}
-            aria-label="Navigate to Teams section"
+          </Link>
+          <Link
+            to="/teams"
+            className={`nav-link ${location.pathname.startsWith('/teams') ? 'active' : ''}`}
+            aria-label="Navigate to Teams"
           >
             Teams
-          </button>
-          <button
-            className="nav-link"
-            onClick={() => scrollToSection('news')}
-            aria-label="Navigate to News section"
+          </Link>
+          <Link
+            to="/news"
+            className={`nav-link ${location.pathname === '/news' ? 'active' : ''}`}
+            aria-label="Navigate to News"
           >
             News
-          </button>
-          <button
-            className="nav-link"
-            onClick={() => scrollToSection('schedule')}
-            aria-label="Navigate to Schedule section"
+          </Link>
+          <Link
+            to="/schedule"
+            className={`nav-link ${location.pathname === '/schedule' ? 'active' : ''}`}
+            aria-label="Navigate to Schedule"
           >
             Schedule
-          </button>
-          <button
-            className="nav-link"
-            onClick={() => scrollToSection('about')}
-            aria-label="Navigate to About section"
+          </Link>
+          <Link
+            to="/about"
+            className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}
+            aria-label="Navigate to About"
           >
             About
-          </button>
-          <button
-            className="nav-link"
-            onClick={() => scrollToSection('partners')}
-            aria-label="Navigate to Partners section"
+          </Link>
+          <Link
+            to="/partners"
+            className={`nav-link ${location.pathname === '/partners' ? 'active' : ''}`}
+            aria-label="Navigate to Partners"
           >
             Partners
-          </button>
-          <button
-            className="nav-link"
-            onClick={() => scrollToSection('contact')}
-            aria-label="Navigate to Contact section"
-          >
-            Contact
-          </button>
+          </Link>
           <a
             href="https://discord.gg/roso"
             target="_blank"
