@@ -10,7 +10,7 @@ export default function App() {
       <section className="hero-section" id="home">
         <div className="hero-logo-container">
           <img
-            src="/prod/roso-logo.svg"
+            src="/prod/assets/roso-logo.svg"
             alt="ROSOIDEAE Logo"
             className="hero-logo"
           />

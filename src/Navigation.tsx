@@ -33,7 +33,7 @@ export default function Navigation() {
           aria-label="Navigate to home"
         >
           <img 
-            src="/prod/roso-logo.svg" 
+            src="/prod/assets/roso-logo.svg" 
             alt="ROSO" 
             className="nav-logo"
             onError={(e) => {
