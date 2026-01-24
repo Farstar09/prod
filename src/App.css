@@ -1437,6 +1437,45 @@ body {
   font-weight: 500;
 }
 
+/* Team Logo Section */
+.team-logo-section {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.team-logo-placeholder {
+  width: 200px;
+  height: 200px;
+  border: 2px dashed var(--color-hairline);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  transition: all 0.3s ease;
+}
+
+.team-logo-placeholder:hover {
+  border-color: var(--color-accent);
+  background: linear-gradient(135deg, rgba(200, 75, 75, 0.1) 0%, rgba(200, 75, 75, 0.05) 100%);
+}
+
+.logo-text {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 .roster-section {
   margin-bottom: 5rem;
 }

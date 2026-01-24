@@ -118,6 +118,7 @@
 .nav-join-button {
   background: transparent;
   border: 2px solid #C84B4B;
+  border-radius: 50px;
   color: #C84B4B;
   font-family: inherit;
   font-size: 0.95rem;

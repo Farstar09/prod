@@ -28,7 +28,7 @@ export default function Teams() {
 
         <Link to="/teams/academy" className="team-panel">
           <div className="team-panel-content">
-            <h3 className="team-panel-title">ROSO Esports Acad</h3>
+            <h3 className="team-panel-title">ROSO Esports Academy</h3>
             <p className="team-panel-subtitle">TBD</p>
             <p className="team-panel-description">Developing the next generation of talent</p>
           </div>
