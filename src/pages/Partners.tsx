@@ -8,9 +8,9 @@ export default function Partners() {
       <div className="partners-grid">
         <div className="partner-card">
           <div className="partner-logo-placeholder">Partner Logo</div>
-          <h3 className="partner-name">Gaming Hardware Partner</h3>
+          <h3 className="partner-name">TBD</h3>
           <p className="partner-description">
-            Providing top-tier gaming peripherals and hardware to our competitive teams.
+            TBD
           </p>
           <a href="https://discord.gg/roso" className="partner-link" target="_blank" rel="noopener noreferrer">
             Learn more →
@@ -18,9 +18,9 @@ export default function Partners() {
         </div>
         <div className="partner-card">
           <div className="partner-logo-placeholder">Partner Logo</div>
-          <h3 className="partner-name">Energy Drink Sponsor</h3>
+          <h3 className="partner-name">TBD</h3>
           <p className="partner-description">
-            Fueling our teams with premium energy drinks for peak performance.
+            TBD
           </p>
           <a href="https://discord.gg/roso" className="partner-link" target="_blank" rel="noopener noreferrer">
             Learn more →
@@ -28,9 +28,9 @@ export default function Partners() {
         </div>
         <div className="partner-card">
           <div className="partner-logo-placeholder">Partner Logo</div>
-          <h3 className="partner-name">Apparel Partner</h3>
+          <h3 className="partner-name">TBD</h3>
           <p className="partner-description">
-            Designing and producing official ROSOIDEAE team merchandise and apparel.
+            TBD
           </p>
           <a href="https://discord.gg/roso" className="partner-link" target="_blank" rel="noopener noreferrer">
             Learn more →
@@ -38,9 +38,9 @@ export default function Partners() {
         </div>
         <div className="partner-card">
           <div className="partner-logo-placeholder">Partner Logo</div>
-          <h3 className="partner-name">Tournament Organizer</h3>
+          <h3 className="partner-name">TBD</h3>
           <p className="partner-description">
-            Collaborating on exclusive tournament opportunities and competitive events.
+            TBD
           </p>
           <a href="https://discord.gg/roso" className="partner-link" target="_blank" rel="noopener noreferrer">
             Learn more →

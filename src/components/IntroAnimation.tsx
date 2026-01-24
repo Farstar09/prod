@@ -29,7 +29,7 @@ export default function IntroAnimation() {
     <div className={`intro-overlay ${!isVisible ? 'fade-out' : ''}`}>
       <div className="intro-logo-wrapper">
         <img
-          src="/prod/assets/roso-logo.svg"
+          src="/prod/assets/logo-org.png"
           alt="ROSOIDEAE"
           className="intro-logo"
         />
