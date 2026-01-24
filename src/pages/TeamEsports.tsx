@@ -12,6 +12,15 @@ export default function TeamEsports() {
       <h2 className="section-title">ROSO Esports</h2>
       <p className="team-subtitle">Title Roster</p>
 
+      {/* Team Logo Section */}
+      <div className="team-logo-section">
+        <div className="team-logo-container">
+          <div className="team-logo-placeholder">
+            <span className="logo-text">Team Logo</span>
+          </div>
+        </div>
+      </div>
+
       <div className="roster-section">
         <h3 className="roster-section-title">Players</h3>
         <div className="roster-grid">
