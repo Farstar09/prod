@@ -11,6 +11,11 @@ export default function Teams() {
       
       <div className="teams-grid">
         <Link to="/teams/esports" className="team-panel">
+          <div className="team-panel-logo">
+            <div className="team-panel-logo-placeholder">
+              <span className="logo-text">ROSO</span>
+            </div>
+          </div>
           <div className="team-panel-content">
             <h3 className="team-panel-title">ROSO Esports</h3>
             <p className="team-panel-subtitle">Title Roster</p>
@@ -19,6 +24,11 @@ export default function Teams() {
         </Link>
 
         <Link to="/teams/gc" className="team-panel">
+          <div className="team-panel-logo">
+            <div className="team-panel-logo-placeholder">
+              <span className="logo-text">ROSO GC</span>
+            </div>
+          </div>
           <div className="team-panel-content">
             <h3 className="team-panel-title">ROSO GC</h3>
             <p className="team-panel-subtitle">GC Title Roster</p>
@@ -27,6 +37,11 @@ export default function Teams() {
         </Link>
 
         <Link to="/teams/academy" className="team-panel">
+          <div className="team-panel-logo">
+            <div className="team-panel-logo-placeholder">
+              <span className="logo-text">ACADEMY</span>
+            </div>
+          </div>
           <div className="team-panel-content">
             <h3 className="team-panel-title">ROSO Esports Academy</h3>
             <p className="team-panel-subtitle">TBD</p>
