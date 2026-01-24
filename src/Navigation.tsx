@@ -24,7 +24,7 @@ export default function Navigation() {
           aria-label="Navigate to home"
         >
           <img 
-            src="/prod/assets/roso-logo.svg" 
+            src="/prod/assets/logo-org.png" 
             alt="ROSO" 
             className="nav-logo"
             onError={(e) => {

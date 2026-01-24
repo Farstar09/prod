@@ -7,7 +7,7 @@ export default function Home() {
       <section className="hero-section" id="home">
         <div className="hero-logo-container">
           <img
-            src="/prod/assets/roso-logo.svg"
+            src="/prod/assets/logo-org.png"
             alt="ROSOIDEAE Logo"
             className="hero-logo"
           />
@@ -90,10 +90,10 @@ export default function Home() {
         <div className="section-container">
           <p className="sponsors-label">Supported By</p>
           <div className="sponsors-logos">
-            <div className="sponsor-placeholder">Partner 1</div>
-            <div className="sponsor-placeholder">Partner 2</div>
-            <div className="sponsor-placeholder">Partner 3</div>
-            <div className="sponsor-placeholder">Partner 4</div>
+            <div className="sponsor-placeholder">TBD</div>
+            <div className="sponsor-placeholder">TBD</div>
+            <div className="sponsor-placeholder">TBD</div>
+            <div className="sponsor-placeholder">TBD</div>
           </div>
         </div>
       </section>
